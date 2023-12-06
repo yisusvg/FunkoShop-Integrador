@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Log in</title>
+    <link rel="stylesheet" href="../../css/login/index.css" />
+  </head>
+  <body>
+    <form action="">
+      <div class="container-login">
+        <h2>INGRESAR A MI CUENTA</h2>
+        <div>
+          <div class="flex-ingresar">
+            <label class="email" for="email">Email:</label>
+            <input
+              class="value-email"
+              type="text"
+              id="email"
+              name="email"
+              value="johndoe@correo.com"
+              required
+            />
+          </div>
+        </div>
+        <div class="flex-ingresar">
+          <label class="password" for="password">Contraseña:</label>
+          <input
+            class="value-password"
+            type="password"
+            id="password"
+            name="password"
+            value="********"
+            required
+          />
+        </div>
+        <div>
+          <div class="flex-ingresar">
+            <input class="boton" type="submit" value="Ingresar" />
+            <div class="borde-recuerdame">
+              <input
+                class="checkbox"
+                type="checkbox"
+                id="rememberMe"
+                name="rememberMe"
+              />
+              <label class="recordarme" for="rememberMe">Recordarme</label>
+            </div>
+          </div>
+          <p class="recuperar">
+            <a href="registrarse.html">Olvidé mi contraseña</a>
+          </p>
+        </div>
+      </div>
+    </form>
+  </body>
+</html>
