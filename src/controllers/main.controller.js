@@ -1,7 +1,9 @@
-module.exports = {
-    home: (req, res) => res.render('home', {
-        title: "Home - Funkoshop"
+const path = require('path');
+
+module.exports ={
+    home: (req,res) => res.render('index',{
+        title:"Hola desde home"
     }),
-    contact: (req, res) => res.send('esta es la vista de contacto'),
-    faqs: (req, res) => res.send('esta es la vista de Preguntas frecuentes')
+    contacto: (req,res) => res.send('Soy contactos'),
+
 }
