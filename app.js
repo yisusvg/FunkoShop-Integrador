@@ -16,7 +16,7 @@ const shopRoutes = require('./src/routes/shop.routes');
 const loginRoutes = require('./src/routes/login.routes');
 
 
-const PORT = 3003;
+const PORT = 3000;
 
 // TEMPLATE ENGINES
 
