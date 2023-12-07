@@ -1,6 +1,7 @@
 const express = require ('express');
 const path = require('path');
 const router = express.Router();
+const adminController = require('../controllers/admin.controller');
 
 router.delete('/item/:id', (req,res)=>{
     const { id } = req.params;
@@ -8,6 +9,15 @@ router.delete('/item/:id', (req,res)=>{
     res.send(`Usted quiere eliminar el item: ${id}`);
 
 })
+
+router.get('/', adminController.admin);
+router.get('/create', adminController.create);
+router.get('/edit/:id',adminController.edit);
+router.get('/delete/:id',adminController.delete);
+
+
+
+
 
 
 module.exports = router;

@@ -8,5 +8,7 @@ const router = express.Router();
 
 router.get('/home',mainControllers.home); 
 router.get('/contacto',mainControllers.contacto);
+router.get('/about',mainControllers.about);
+router.get('/faqs',mainControllers.faqs);
 module.exports = router;
 

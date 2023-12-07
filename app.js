@@ -13,7 +13,8 @@ const methodOverride = require('method-override');
 
 const mainRoutes = require('./src/routes/main.routes');
 const shopRoutes = require('./src/routes/shop.routes');
-const loginRoutes = require('./src/routes/login.routes');
+const authRoutes = require('./src/routes/auth.routes');
+const adminRoutes = require('./src/routes/admin.routes');
 
 
 const PORT = 3000;
@@ -26,7 +27,7 @@ app.set('views', path.join(__dirname,"./src/views"))
 
 
 //Middlewares de configuracion
-app.use(express.static('public_html'));
+app.use(express.static('public'));
 app.use(express.urlencoded());
 app.use(express.json());
 app.use(methodOverride('_method'));
@@ -35,7 +36,8 @@ app.use(methodOverride('_method'));
 
 app.use('/', mainRoutes);
 app.use('/shop', shopRoutes);
-app.use('/auth', loginRoutes);
+app.use('/auth', authRoutes);
+app.use('/admin', adminRoutes);
 
 
 app.use((req,res)=>{
