@@ -1,0 +1,105 @@
+.container-login {
+    width: 515px;
+    height: 289.13px;
+    margin-top: 180px;
+    margin-left: 462.5px;
+    border-radius: 3px;
+  }
+  
+  h2 {
+    font-family: Raleway;
+    font-size: 40px;
+    font-weight: 700;
+    line-height: 49px;
+    letter-spacing: 0.04em;
+    text-align: center;
+  }
+  
+  .email {
+    font-family: Inter;
+    font-size: 24px;
+    font-weight: 400;
+    line-height: 29px;
+    letter-spacing: 0.04em;
+    text-align: right;
+  }
+  
+  .value-email {
+    font-family: Inter;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 19px;
+    letter-spacing: 0.04em;
+    text-align: right;
+    color: #b9b9b9;
+    border-top: none; /* Elimina el borde superior */
+    border-left: none; /* Elimina el borde izquierdo */
+    border-right: none; /* Elimina el borde derecho */
+    border-bottom: 2px solid #ff3333;
+  }
+  
+  .password {
+    font-family: Inter;
+    font-size: 24px;
+    font-weight: 400;
+    line-height: 29px;
+    letter-spacing: 0.04em;
+    text-align: right;
+  }
+  
+  .value-password {
+    border-top: none; /* Elimina el borde superior */
+    border-left: none; /* Elimina el borde izquierdo */
+    border-right: none; /* Elimina el borde derecho */
+    border-bottom: 2px solid #ff3333;
+  }
+  
+  .boton {
+    font-family: Inter;
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 15px;
+    letter-spacing: 0em;
+    text-align: center;
+    color: #ffffff;
+    background: #ff3333;
+    width: 103px;
+    height: 39.06px;
+    top: 390.78px;
+    left: 583.26px;
+  }
+  
+  .recordarme {
+    font-family: Inter;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 22px;
+    letter-spacing: 0em;
+    text-align: left;
+    border: 2px solid #1f1f1f;
+  }
+  
+  .checkbox {
+    width: 16.27px;
+    height: 16.27px;
+    top: 402.18px;
+    left: 727.49px;
+    border-radius: 3px;
+    border: 2px;
+  }
+  
+  .recuperar {
+    font-family: Inter;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 17px;
+    letter-spacing: 0em;
+    text-align: center;
+    color: #1d84b5;
+  }
+  
+  .flex-ingresar {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+  }
