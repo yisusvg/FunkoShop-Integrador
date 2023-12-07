@@ -17,6 +17,7 @@ const authRoutes = require('./src/routes/auth.routes');
 const adminRoutes = require('./src/routes/admin.routes');
 
 
+
 const PORT = 3000;
 
 // TEMPLATE ENGINES
@@ -38,6 +39,7 @@ app.use('/', mainRoutes);
 app.use('/shop', shopRoutes);
 app.use('/auth', authRoutes);
 app.use('/admin', adminRoutes);
+
 
 
 app.use((req,res)=>{
