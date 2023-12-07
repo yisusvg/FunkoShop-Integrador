@@ -12,8 +12,10 @@ router.delete('/item/:id', (req,res)=>{
 
 router.get('/', adminController.admin);
 router.get('/create', adminController.create);
+router.post('/create', adminController.create);
 router.get('/edit/:id',adminController.edit);
-router.get('/delete/:id',adminController.delete);
+router.put('/edit/:id',adminController.edit);
+router.delete('/delete/:id',adminController.delete);
 
 
 
