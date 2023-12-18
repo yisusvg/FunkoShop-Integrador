@@ -1,13 +1,17 @@
-const express = require('expess');
-const router = express.router();
+const express = require('express');
+const router = express.Router();
+const upload = require('../middlewares/uploadfiles');
 
-router.post('/item/:id', (req, res)=>{
-    const {id} = req.params;
-    res.send(`esta seguro?: ${id}`);
-})
+const { admin, createView, createItem, editView, editItem, deleteItem } = require('../controllers/admin.controller');
 
-router.delete('/item/:id', (req, res)=>{
+router.get('/', admin);
+router.get('/create', createView);
+router.post('/create', upload.array('images', 2), createItem );
+router.get('/edit/:id',  editView);
+router.put('/edit/:id' , upload.array('images', 2), editItem);
+router.delete('/delete/:id', deleteItem );
 
-})
+
+
 
 module.exports = router;
