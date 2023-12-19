@@ -1,102 +1,79 @@
-main.admin {
-    font-family: var(--font-inter);
-    min-height: 75vh;
+#admin {
+    margin: var(--spacing-68) auto;
 }
-
-.createdit__title {
-    display: inline;
-    font-family: var(--font-raleway);
-    font-weight: 700;
-    font-size: var(--font-38-jumbo);
-}
-
-.block__data {
+.admin__search {
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-8);
     margin-bottom: var(--spacing-36);
 }
 
-.admin__main {
-    margin: var(--spacing-36) auto;
+.admin__icon {
+    font-size: var(--font-xlarge);
 }
 
-.listado__head {
-    margiN: var(--spacing-36) 0;
+.admin__search-bar {
+    font-size: var(--font-medium);
+    padding: var(--spacing-8) var(--spacing-8);
+    border: 2px solid var(--dark-solid);
+    border-radius: 6px;
+    outline: none;
+    flex: 0 0 35%;
+}
+
+.admin__list {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-24);
+}
+
+.admin__header {
     display: flex;
     align-items: center;
     justify-content: space-between;
+    margin-bottom: var(--spacing-24);
 }
 
-.listado__title {
-    font-size: var(--font-30-xlarge);
-    font-weight: bold;
+.admin__header h2 {
+    font-size: var(--font-jumbo) ;
 }
 
-
-.listado__add {
+.admin__header span {
     display: flex;
     align-items: center;
-}
-
-.listado__add h2 {
+    gap: var(--spacing-16);
+    font-size: var(--font-large);
     font-weight: 700;
 }
 
-.listado__add--icon {
-    color: var(--rojo);
-    font-size: var(--font-38-jumbo);
-    padding: 0 var(--spacing-20);
+.admin__header span a {
+    display: flex;
+    font-size: var(--font-medium);
 }
 
-.listado__add--icon:hover {
-    color: var(--rojo-70);
+.admin-table {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-16);
 }
 
-.table {
-    font-size: var(--font-18-medium);
-}
-
-.td__icon--edit,
-.td__icon--delete {
-    cursor: pointer;
-}
-
-.td__icon--edit {
-    color: var(--azul);
-}
-
-.td__icon--delete {
-    color: var(--rojo);
-}
-
-.td__icon--edit:hover {
-    color: var(--azul-70)
-}
-
-.td__icon--delete:hover {
-    color: var(--rojo-70)
-}
-
-th.id {
+.admin-table__header,
+.admin-table__row {
+    display: grid;
+    grid-template-columns: 40px 1fr 3fr 3fr 40px 40px;
+    align-items: center;
+    gap: var(--spacing-16);
+    font-size: var(--font-medium);
     font-weight: 500;
 }
 
-.btn__borrar--item {
-    border: none;
+.admin-table__row button {
     background-color: transparent;
-
+    border: none;
+    font-size: 28px;
 }
 
-/* PAGINA EDIT */
-.edit__img {
-    max-width: 150px;
-    padding-bottom: var(--spacing-8);
+.admin-table__header {
+    margin-bottom: var(--spacing-24);
 }
 
-.edit__img--side {
-    font-size: var(--font-small);
-    text-align: center;
-    padding-top: var(--spacing-8);
-    border-top: 2px solid var(--primary-solid);
-    font-weight: 600;
-}
-
-/* Todo Okey */

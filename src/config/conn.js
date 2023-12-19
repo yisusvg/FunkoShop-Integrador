@@ -1,30 +1,26 @@
 const mysql = require('mysql2');
-
-
-//Estaría bueno que tengamos todos el mismo nombre de la base
-    //de datos. IMPORTANTE: EN PASSWORD va la contraseña
-        //que ustedes hayan puesto.
+require('dotenv').config();
 
 const pool = mysql.createPool({
-    user:'root',
-    password:'123456', //<------
-    host:'localhost',
-    port: 3306,
-    database:'funkoshop', //<-----
-    connectionLimit:10,
-    waitForConnections:true,
-    queueLimit:0
-});
+    user: process.env.DBUSER,
+    password: process.env.DBPASS,
+    host: process.env.DBHOST,
+    port: process.env.DBPORT,
+    database: process.env.DBSCHEMA,
+    connectionLimit: 10,
+    waitForConnections: true,
+    queueLimit: 0
+})
 
-pool.getConnection((err, conn) =>{
-    if(err){
-        console.log("Hubo un error al conectarse a la DB: " + err);
-    }else{
-        console.log('Conexión a la Base de datos exitosa');
+pool.getConnection((err, conn) => {
+    if (err) {
+        console.log('Hubo un error al conectar a la DB: ' + err);
+    }  else {
+        console.log('Conexion a la base de datos exitosa')
         conn.release();
     }
 });
 
-module.exports= {
+module.exports = {
     conn: pool.promise()
 }

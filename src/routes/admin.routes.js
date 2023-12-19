@@ -1,19 +1,17 @@
-const express = require("express");
-const path = require("path");
+const express = require('express');
 const router = express.Router();
-const adminController = require("../controllers/admin.controller");
+const upload = require('../middlewares/uploadfiles');
 
-router.delete("/item/:id", (req, res) => {
-  const { id } = req.params;
+const { admin, createView, createItem, editView, editItem, deleteItem } = require('../controllers/admin.controller');
 
-  res.send(`Usted quiere eliminar el item: ${id}`);
-});
+router.get('/', admin);
+router.get('/create', createView);
+router.post('/create', upload.array('images', 2), createItem );
+router.get('/edit/:id',  editView);
+router.put('/edit/:id' , upload.array('images', 2), editItem);
+router.delete('/delete/:id', deleteItem );
 
-router.get("/", adminController.admin);
-router.get("/create", adminController.create);
-router.post("/create", adminController.create);
-router.get("/edit/:id", adminController.edit);
-router.put("/edit/:id", adminController.edit);
-router.delete("/delete/:id", adminController.delete);
+
+
 
 module.exports = router;
