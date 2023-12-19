@@ -1,5 +1,5 @@
 const path = require("path");
-const {getAll} = require ('../models/product.model');
+const {getAll, deleteProduct} = require ('../models/product.model');
 const { log } = require("console");
 
 const data = require('../data/characters.json');
@@ -12,9 +12,18 @@ module.exports = {
 
     const dbdata = await getAll();
 
+    console.log(dbdata);
+
     res.render(("shop/shop"),{
       data
     });
+  },
+
+  itemDelete: async (req, res) => {
+    const { product_id } = req.params;
+    const dbdata = await deleteProduct(product_id);
+    console.log(dbdata);
+    res.redirect("/shop");  
   },
 
   item: (req, res) => {
