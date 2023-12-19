@@ -4,7 +4,19 @@
 
 //Crear productos
 
-//Eliminar productos
+//Eliminar un producto
+const deleteProduct = async (product_id) => {
+    try{
+        const [rows] = await conn.query('DELETE FROM product WHERE product_id = ?;', [product_id]);
+        return rows;
+    } catch(error){
+        throw error;
+    } finally{
+        conn.releaseConnection();
+    }
+   
+}
+
 
 
 //Editar/actualizar productos
@@ -26,5 +38,6 @@ const getAll = async () => {
 }
 
 module.exports = {
-    getAll
+    getAll,
+    deleteProduct
 }
